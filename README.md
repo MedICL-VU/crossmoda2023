@@ -6,6 +6,7 @@ This is the implementation for the paper:
 
 ### Problem formulation: unsupervised domain adaptation (UDA)
 In the CrossMoDA challenge, participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain with no manual labeling. In the 2023 edition, the datasets were collected from multiple institutions, and such heterogeous data lead to extra challenges to the UDA problem.
+
 <img src="https://github.com/han-liu/crossmoda2023/blob/main/vandy365_gif1.gif" alt="drawing" width="650"/>
 
 ### Overview of our solution
