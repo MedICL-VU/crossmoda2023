@@ -30,10 +30,10 @@ ImagesB/
 
 ## Train
 ```
-python train.py -n YourExperimentName -d YourImageFolder 
+python train.py -n YourExperimentName -d /Data 
 ```
 
 ## Test
 ```
-python test.py -n YourExperimentName -epoch latest --code 0 0 1 -i YourImageFolder/ImagesA
+python test.py -n YourExperimentName -epoch latest --code 0 0 1 -i /Data/ImagesA
 ```
