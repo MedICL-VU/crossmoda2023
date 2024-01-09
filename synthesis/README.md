@@ -30,7 +30,7 @@ ImagesA/                                         LabelsA/
 |-----...                                        |-----...
 ```
 
-For target domain, ImagesB, the filenames should include a **tag** that specifies the site information (or any other categorical information). This information will be used as the condition to the network to generate controllable styles. In our example, the tags are 'etz', 'ldn', and 'ukm'.
+For target domain, ImagesB, the filename should include a **tag** that specifies the site information (or any other categorical information), which will be taken by the network as the condition to generate controllable styles. In our example, the tags are 'etz', 'ldn', and 'ukm'.
 ```
 ImagesB/
 |-----crossmoda2023_etz_106.nii.gz
