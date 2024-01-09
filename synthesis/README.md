@@ -1,8 +1,10 @@
-# Dynamic network for unpaired image translation
+# Step 1: unpaired image translation with dynamic network
 Our synthesis network is used for 3D unpaired image translation, with controllable output styles by conditioning on a one-hot code.
 
 ## Data preparation
 A and B correspond to the source and target domain, respectively. The filenames in the ImagesA and LabelsA should be the same. EdgesA stores the weighting maps used for re-weighting the edge loss. If EdgesA is not provided, the edge loss will simply treat each voxel equally.
+
+CrossMoDA 2023 dataset can be officially downloaded [here](https://www.synapse.org/#!Synapse:syn51236108/wiki/621732).
 
 ```
 Data/
@@ -14,16 +16,16 @@ Data/
 
 For source domain, ImagesA and LabelsA, the filenames should be arranged as follows.
 ```
-ImagesA/                                     LabelsA/
-|-----crossmoda2023_etz_1.nii.gz             |-----crossmoda2023_etz_1.nii.gz
-|-----crossmoda2023_etz_2.nii.gz             |-----crossmoda2023_etz_2.nii.gz
-|-----...                                    |-----...
-|-----crossmoda2023_ldn_1.nii.gz             |-----crossmoda2023_ldn_1.nii.gz
-|-----crossmoda2023_ldn_2.nii.gz             |-----crossmoda2023_ldn_2.nii.gz
-|-----...                                    |-----...
-|-----crossmoda2023_ukm_1.nii.gz             |-----crossmoda2023_ukm_1.nii.gz
-|-----crossmoda2023_ukm_2.nii.gz             |-----crossmoda2023_ukm_2.nii.gz
-|-----...                                    |-----...
+ImagesA/                                         LabelsA/
+|-----crossmoda2023_etz_1.nii.gz                 |-----crossmoda2023_etz_1.nii.gz
+|-----crossmoda2023_etz_2.nii.gz                 |-----crossmoda2023_etz_2.nii.gz
+|-----...                                        |-----...
+|-----crossmoda2023_ldn_1.nii.gz                 |-----crossmoda2023_ldn_1.nii.gz
+|-----crossmoda2023_ldn_2.nii.gz                 |-----crossmoda2023_ldn_2.nii.gz
+|-----...                                        |-----...
+|-----crossmoda2023_ukm_1.nii.gz                 |-----crossmoda2023_ukm_1.nii.gz
+|-----crossmoda2023_ukm_2.nii.gz                 |-----crossmoda2023_ukm_2.nii.gz
+|-----...                                        |-----...
 ```
 
 For target domain, ImagesB, the filenames should include a **tag** that specifies the site information (or any other categorical information). This information will be used as the condition to the network to generate controllable styles. In our example, the tags are 'etz', 'ldn', and 'ukm'.
