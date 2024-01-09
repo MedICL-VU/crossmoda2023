@@ -7,13 +7,16 @@ This is the implementation for the paper:
 ### Problem formulation: unsupervised domain adaptation (UDA)
 In the CrossMoDA challenge, participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain with no manual labeling. In the 2023 edition, the datasets were collected from multiple institutions, and such heterogeous data lead to extra challenges to the UDA problem.
 
-<img src="https://github.com/han-liu/crossmoda2023/blob/main/vandy365_gif1.gif" alt="drawing" width="650"/>
+<div style="text-align: center;">
+ <img src="https://github.com/han-liu/crossmoda2023/blob/main/vandy365_gif1.gif" alt="drawing" width="650"/>
+</div>
 
 ### Overview of our solution
 - Step 1: unpaired image translation. We extended the QS-Attn model to 3D and modified the generator to a dynamic network. The dynamic network can generate controllable output style by conditioning on a one-hot site code. The codes for image synthesis are provided in the 'Synthesis' folder.
 
-<img src="https://github.com/han-liu/crossmoda2023/blob/main/vandy365_fig1.png" alt="drawing" width="650"/>
-
+<div style="text-align: center;">
+<img src="https://github.com/han-liu/crossmoda2023/blob/main/vandy365_fig1.png" alt="drawing" width="600"/>
+</div>
 
 If you find our code/paper helpful for your research, please kindly consider citing our work:
 ```
