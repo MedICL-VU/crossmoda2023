@@ -10,8 +10,12 @@ In the CrossMoDA challenge, participants are provided with the **labeled** sourc
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_gif1.gif" alt="gif" width="600"/></p>
 
 ### Our solution: image-level domain alignment
+<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig1.png" alt="drawing" width="600"/></p>
+
 #### Step 1: unpaired image translation
 We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the '**synthesis**' folder.
+
+<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig2.png" alt="drawing" width="600"/></p>
 
 #### Step 2: train only with synthetic images
 We used [nnU-Netv2](https://github.com/MIC-DKFZ/nnUNet) for segmentation tasks. 
@@ -24,9 +28,7 @@ Once you download the nnU-Net repo, you need to
 #### Step 3: self-training
 Real target domain images are included for training to further reduce the domain gap. Here, you can simply use the model obtained by step 2 to make inference on unlabeled target domain images. Then re-train the nnU-Net using both the synthetic imaegs (w/ real labels) and real images (w/ pseudo labels). For our solution, we simply filter out the poor pseudo labels by connected component analysis. Feel free to explore more advanced pseudo label filtering methods.
 
-<p align="center">
-<img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig1.png" alt="drawing" width="600"/>
-</p>
+
 
 If you find our code/paper helpful for your research, please kindly consider citing our work:
 ```
