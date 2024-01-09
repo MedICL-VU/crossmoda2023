@@ -26,7 +26,7 @@ class BaseOptions():
         parser.add_argument('-d', '--dataroot', type=str, default='./', help='path to images (should have subfolders ImagesA, ImagesB, LabelsA, EdgesA, etc)')
         parser.add_argument('-n', '--name', type=str, required=True, help='name of the experiment.')
         parser.add_argument('--crop_size', default=(256, 144, 8), nargs=3, type=int, help='cropped patch size')
-        parser.add_argument('--segB', action='store_true', help='whether use the segmentation of fake B for training')
+        parser.add_argument('--segB', action='store_false', help='whether use the segmentation of fake B for training. Default: True')
 
         # default parameteres
         parser.add_argument('--easy_label', type=str, default='experiment_name', help='Interpretable name')
@@ -35,8 +35,8 @@ class BaseOptions():
         
         # model parameters
         parser.add_argument('--model', type=str, default='vandy365', help='chooses which model to use.')
-        parser.add_argument('--input_nc', type=int, default=1, help='# of input image channels: 3 for RGB and 1 for grayscale')
-        parser.add_argument('--output_nc', type=int, default=1, help='# of output image channels: 3 for RGB and 1 for grayscale')
+        parser.add_argument('--input_nc', type=int, default=1, help='# of input image channels')
+        parser.add_argument('--output_nc', type=int, default=1, help='# of output image channels')
         parser.add_argument('--seg_output_nc', type=int, default=4, help='# of output channels for the segmentation task (4 for crossmoda2023)')
         parser.add_argument('--ngf', type=int, default=64, help='# of gen filters in the last conv layer')
         parser.add_argument('--ndf', type=int, default=64, help='# of discrim filters in the first conv layer')
