@@ -14,9 +14,6 @@ In the CrossMoDA challenge, participants are provided with the **labeled** sourc
 
 #### Step 1: unpaired image translation (our major innovation)
 We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D, and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the '**synthesis**' folder.
-
-<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig2.png" alt="drawing" width="500"/></p>
-
 #### Step 2: train only with synthetic images
 We used [nnU-Netv2](https://github.com/MIC-DKFZ/nnUNet) for segmentation tasks. 
 We created a customized trainer and designed two augmentation techniques to augment the local intensities of the structures-of-interest. Our customized trainer and the augmentation script are provided in the '**segmentation**' folder. 
