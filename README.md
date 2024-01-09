@@ -10,7 +10,6 @@ In the CrossMoDA challenge, participants are provided with the **labeled** sourc
 <p align="center">
 <img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_gif1.gif" alt="gif" width="600"/>
 </p>
-
 ### Our solution: image-level domain alignment
 #### Step 1: unpaired image translation
 We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the 'synthesis' folder.
