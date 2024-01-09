@@ -18,7 +18,9 @@ We extended the [QS-Attn model](https://github.com/sapphire497/query-selected-at
 #### Step 2: train only with synthetic images
 We used [nnU-Netv2](https://github.com/MIC-DKFZ/nnUNet) for segmentation tasks. Specifically, we created a customized trainer and designed two intensity augmentation techniques to augment the local intensities of the structures-of-interest. Our customized trainer and the augmentation script are provided in the 'segmentation' folder. 
 
-Once you download the nnU-Net repo, you can add the 'challenge' folder to the nnUNet/nnunetv2/training/nnUNetTrainer/variants, and replace the 'masking.py' in nnUNet/nnunetv2/training/data_augmentation/custom_transforms.
+Once you download the nnU-Net repo, you need to
+- add the 'challenge' folder to the nnUNet/nnunetv2/training/nnUNetTrainer/variants
+- replace the 'masking.py' in nnUNet/nnunetv2/training/data_augmentation/custom_transforms.
 
 #### Step 3: self-training
 Real target domain images are included for training to further reduce the domain gap. Here, you can simply use the model obtained by step 2 to make inference on unlabeled target domain images. Then re-train the nnU-Net using both the synthetic imaegs (w/ real labels) and real images (w/ pseudo labels). For our solution, we simply filter out the poor pseudo labels by connected component analysis. Feel free to explore more advanced pseudo label filtering methods.
