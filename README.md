@@ -1,10 +1,10 @@
-# :trophy: 1st place solution for CrossMoDA 2023 challenge  
+## :trophy: 1st place solution for CrossMoDA 2023 challenge  
  [![arXiv](https://img.shields.io/badge/arXiv-2311.12437-blue)]([https://arxiv.org/abs/2203.08483](https://arxiv.org/pdf/2311.12437.pdf)) [![video](https://img.shields.io/badge/video-Workshop-red)](xx) [![website](https://img.shields.io/badge/Challenge%20website-50d13d)](https://www.synapse.org/#!Synapse:syn51236108/wiki/621615)
  
 This is the implementation for the paper:
 [Learning site-specific styles for multi-institutional unsupervised cross-modality domain adaptation](https://arxiv.org/pdf/2311.12437.pdf)
 
-## Problem formulation
+#### Problem formulation
 In the CrossMoDA challenge, participants are provided with source domain images and labels (T1 contrast-enhanced MRIs) and the target domain images (high-resolution T2 MRIs). Note that T1 and T2 images are unpaired. The goal of this challenge is to obtain a segmentation model for the target domain, i.e., T2 MRIs, with no manual labeling. This task is known as the unsupervised domain adaptation (UDA) problem. 
 
 In CrossMoDA 2023, both the source and target domain data were collected from multiple institutions and thus the images may look really different, though they are in the same domain. This intra-domain variability leads to a extra challenges to the UDA problem.
