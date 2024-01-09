@@ -9,7 +9,7 @@ In the CrossMoDA challenge, participants are provided with the **labeled** sourc
 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_gif1.gif" alt="gif" width="600"/></p>
 
-### Our solution: image-level domain alignment
+### Overview of our solution: image-level domain alignment
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig1.png" alt="drawing" width="550"/></p>
 
 #### Step 1: unpaired image translation (our major innovation)
