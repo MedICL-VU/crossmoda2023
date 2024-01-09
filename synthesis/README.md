@@ -1,5 +1,5 @@
 # Dynamic network for unpaired image translation
-Our synthesis network is used for 3D unpaired image translation. It can generate controllable output styles by conditioning on a one-hot code.
+Our synthesis network is used for 3D unpaired image translation, with controllable output styles by conditioning on a one-hot code.
 
 ## Data preparation
 A and B correspond to the source and target domain, respectively. The filenames in the ImagesA and LabelsA should be the same. EdgesA stores the weighting maps used for re-weighting the edge loss. If EdgesA is not provided, the edge loss will simply treat each voxel equally.
