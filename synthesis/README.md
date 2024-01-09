@@ -12,21 +12,33 @@ Data/
 |-----EdgesA (optional)
 ```
 
-In the target domain folder, ImagesB, the filenames should include a **tag** that specifies the site information (or any other categorical information). This information will be used as the condition to the network to generate controllable styles. In our example, the tags are 'etz', 'ldn', and 'ukm'.
+For source domain, ImagesA and LabelsA, the filenames should be arranged as follows.
+```
+ImagesA/                                     LabelsA/
+|-----crossmoda2023_etz_1.nii.gz             |-----crossmoda2023_etz_1.nii.gz
+|-----crossmoda2023_etz_2.nii.gz             |-----crossmoda2023_etz_2.nii.gz
+|-----...                                    |-----...
+|-----crossmoda2023_ldn_1.nii.gz             |-----crossmoda2023_ldn_1.nii.gz
+|-----crossmoda2023_ldn_2.nii.gz             |-----crossmoda2023_ldn_2.nii.gz
+|-----...                                    |-----...
+|-----crossmoda2023_ukm_1.nii.gz             |-----crossmoda2023_ukm_1.nii.gz
+|-----crossmoda2023_ukm_2.nii.gz             |-----crossmoda2023_ukm_2.nii.gz
+|-----...                                    |-----...
+```
+
+For target domain, ImagesB, the filenames should include a **tag** that specifies the site information (or any other categorical information). This information will be used as the condition to the network to generate controllable styles. In our example, the tags are 'etz', 'ldn', and 'ukm'.
 ```
 ImagesB/
-|-----crossmoda2023_etz_106
-|-----crossmoda2023_etz_107
+|-----crossmoda2023_etz_106.nii.gz
+|-----crossmoda2023_etz_107.nii.gz
 |-----...
-|-----crossmoda2023_ldn_80
-|-----crossmoda2023_ldn_81
+|-----crossmoda2023_ldn_80.nii.gz
+|-----crossmoda2023_ldn_81.nii.gz
 |-----...
-|-----crossmoda2023_ukm_44
-|-----crossmoda2023_ukm_45
+|-----crossmoda2023_ukm_44.nii.gz
+|-----crossmoda2023_ukm_45.nii.gz
 |-----...
 ```
-
-
 
 ## Train
 ```
