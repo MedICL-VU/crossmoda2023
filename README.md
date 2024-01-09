@@ -12,7 +12,7 @@ In the CrossMoDA challenge, participants are provided with the **labeled** sourc
 - Step 1: unpaired image translation. We extended the QS-Attn model to 3D and modified the generator to a dynamic network. The dynamic network can generate controllable output style by conditioning on a one-hot site code. The codes for image synthesis are provided in the 'Synthesis' folder.
 
 - 
-![overview](https://github.com/han-liu/crossmoda2023/blob/main/vandy365_fig1.png)
+![overview](https://github.com/han-liu/crossmoda2023/blob/main/vandy365_fig1.pdf)
 
 
 If you find our code/paper helpful for your research, please kindly consider citing our work:
