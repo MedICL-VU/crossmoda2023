@@ -9,7 +9,7 @@ In the CrossMoDA challenge, participants are provided with the **labeled** sourc
 ![gif](https://github.com/han-liu/crossmoda2023/blob/main/vandy365_gif1.gif)
 
 ### Overview of our solution
-![overview](https://github.com/han-liu/crossmoda2023/blob/main/vandy365_fig21.png)
+![overview](https://github.com/han-liu/crossmoda2023/blob/main/vandy365_fig1.png)
 
 
 If you find our code/paper helpful for your research, please kindly consider citing our work:
