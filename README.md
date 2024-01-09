@@ -13,7 +13,7 @@ In the CrossMoDA challenge, participants are provided with the **labeled** sourc
 
 ### Our solution: image-level domain alignment
 #### Step 1: unpaired image translation
-We extended the [QS-Attn model](https://github.com/sapphire497/query-selected-attention) to 3D and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the 'synthesis' folder.
+We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the 'synthesis' folder.
 
 #### Step 2: train only with synthetic images
 We used [nnU-Netv2](https://github.com/MIC-DKFZ/nnUNet) for segmentation tasks. Specifically, we created a customized trainer and designed two intensity augmentation techniques to augment the local intensities of the structures-of-interest. Our customized trainer and the augmentation script are provided in the 'segmentation' folder. 
