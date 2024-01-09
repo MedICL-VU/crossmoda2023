@@ -9,7 +9,7 @@ In the CrossMoDA challenge, participants are provided with the **labeled** sourc
 
 In the 2023 edition, the datasets were collected from multiple institutions and thus the images may look really different, though they are in the same domain. This intra-domain variability leads to extra challenges to the UDA problem.
 
-![gif](https://github.com/han-liu/ModDropPlusPlus/blob/main/dynamic_head.gif)
+![gif](https://github.com/han-liu/crossmoda2023/blob/main/vandy365_gif1.gif)
 
 If you find our code/paper helpful for your research, please kindly consider citing our work:
 ```
