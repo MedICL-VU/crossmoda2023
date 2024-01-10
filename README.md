@@ -4,9 +4,19 @@
 This is the implementation for the paper:
 [Learning site-specific styles for multi-institutional unsupervised cross-modality domain adaptation](https://arxiv.org/pdf/2311.12437.pdf)
 
+If you find our code/paper helpful for your research, please kindly consider citing our work:
+```
+@article{liu2023learning,
+  title={Learning Site-specific Styles for Multi-institutional Unsupervised Cross-modality Domain Adaptation},
+  author={Liu, Han and Fan, Yubo and Xu, Zhoubing and Dawant, Benoit M and Oguz, Ipek},
+  journal={arXiv preprint arXiv:2311.12437},
+  year={2023}
+}
+```
+If you have any questions, feel free to contact han.liu@vanderbilt.edu or open an Issue in this repo. 
+
 ### 🔥 Quick start
 In this [playground](synthesis/README.md#playground), you can download our pre-trained sythesis model and some preprocessed data. You will explore how to generate synthetic T2 images with **controllable** styles.
-
 
 ### Problem formulation: unsupervised domain adaptation (UDA)
 In the CrossMoDA challenge, participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain with no manual labeling. In the 2023 edition, the datasets were collected from multiple institutions, and such heterogeous data lead to extra challenges to the UDA problem.
@@ -36,14 +46,6 @@ Each column belongs to the same site/style. Nicely, our synthesized images match
 ### Challenge results
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig3.png" alt="results" width="550"/></p>
 
+### Acknowledgements
+[CUT](https://github.com/taesungp/contrastive-unpaired-translation), [QS-Attn](https://github.com/sapphire497/query-selected-attention), [nnUNet](https://github.com/MIC-DKFZ/nnUNet)
 
-If you find our code/paper helpful for your research, please kindly consider citing our work:
-```
-@article{liu2023learning,
-  title={Learning Site-specific Styles for Multi-institutional Unsupervised Cross-modality Domain Adaptation},
-  author={Liu, Han and Fan, Yubo and Xu, Zhoubing and Dawant, Benoit M and Oguz, Ipek},
-  journal={arXiv preprint arXiv:2311.12437},
-  year={2023}
-}
-```
-If you have any questions, feel free to contact han.liu@vanderbilt.edu or open an Issue in this repo. 
