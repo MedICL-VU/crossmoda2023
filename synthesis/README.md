@@ -52,10 +52,11 @@ ImagesB/
 ```
 
 # Create a virtual environment using Anaconda
-Here we create a virtual environment called 'crossmoda2023'
+Here we create a virtual environment called 'crossmoda2023' and install the dependencies.
 ```
 conda create -n crossmoda2023 python=3.9 -y
 conda activate crossmoda2023
+pip install -r requirements.txt
 ```
 
 ## Train
@@ -69,20 +70,20 @@ python test.py -n YourExperimentName -i /Data/ImagesA --code 0 0 1
 ```
 
 ## Playground
-If you just want to play with our pre-trained model to have fun with the controllable styles, here we are!
+If you just want to play with our pre-trained model and have fun with the controllable styles, this is what you are looking for!
 
 ### Step 1: download the sample data and the pre-trained model to your local machine
 I have prepared several preprocessed data and our pre-trained model in this '[**sample**](https://drive.google.com/file/d/1qF_RX5_acWQ3k-GGBk6Def7SME-Dl_JO/view?usp=sharing)' folder. Once you finish downloading this folder, you need to move the 'pretrained' folder to the checkpoint directory.
 
 ### Step 2: time to play!
 You can either generate the known **site-specific** styles using the codes that the network has been trained with, i.e., (0, 0, 1), (0, 1, 0), (1, 0, 0),
-or any codes you like (even some crazy ones) to generate some **unknown** T2 styles. 
+or any codes you like (even some crazy ones, e.g., (1, 5, 10)) to generate some **unknown** T2 styles. 
 
 You will find that different codes will only have impacts on the image style, not the anatomy! Disentanglement, huh?
 
 ```
 python test.py -n pretrained --src_image SourceImagePath --src_label SourceLabelPath --save_dir OutputFolder --code 1 2 3
 ```
-Some examples are shown blow:
+Some examples of unknown styles are shown below:
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_playground.png" alt="playground" width="600"/></p>
 
