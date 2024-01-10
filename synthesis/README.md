@@ -72,7 +72,7 @@ python test.py -n YourExperimentName -i /Data/ImagesA --code 0 0 1
 If you just want to play with our pre-trained model to have fun with the controllable styles, here we are!
 
 ### Step 1: download the sample data and the pre-trained model to your local machine
-I have prepared several preprocessed data and our pre-trained model in this '[**sample**](xx)' folder. Once you finish downloading this folder, you need to move the 'pretrained' folder to the checkpoint directory.
+I have prepared several preprocessed data and our pre-trained model in this '[**sample**](https://drive.google.com/file/d/1qF_RX5_acWQ3k-GGBk6Def7SME-Dl_JO/view?usp=sharing)' folder. Once you finish downloading this folder, you need to move the 'pretrained' folder to the checkpoint directory.
 
 ### Step 2: time to play!
 You can either generate the known **site-specific** styles using the codes that the network has been trained with, i.e., (0, 0, 1), (0, 1, 0), (1, 0, 0),
