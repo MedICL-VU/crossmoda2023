@@ -37,10 +37,10 @@ We created a customized trainer and designed two augmentation techniques to augm
 >- replace the 'masking.py' in nnUNet/nnunetv2/training/data_augmentation/custom_transforms.
 
 #### Step 3: self-training
->Real target domain images are included for training to further reduce the domain gap. Here, you can simply use the model obtained by step 2 to make inference on unlabeled target domain images. Then re-train the nnU-Net using both the synthetic images (w/ real labels) and real images (w/ pseudo labels). For our solution, we simply filter out the poor pseudo labels by connected component analysis. Feel free to explore more advanced pseudo label filtering methods!
+>To further reduce the domain gap, we include real target domain images for training. We use the model obtained by step 2 to generate pseudo labels on the unlabeled target domain images. Then we re-train the nnU-Net using the combined data, i.e., synthetic images (w/ real labels) and real images (w/ pseudo labels). Of course, the quality of pseudo labels matters! In our solution, we simply filter out the poor pseudo labels via connected component analysis. Feel free to explore more advanced pseudo label filtering methods!
 
 ### Conditional synthesis results
-Each column belongs to the same site/style. Nicely, our synthesized images match the style of the real image from the same site. 
+Each column belongs to the same site/style. Nicely, our synthesized images (top 3 rows) match the style of the real image (bottom row) from the same site. 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_results.png" alt="results" width="550"/></p>
 
 ### Challenge results
