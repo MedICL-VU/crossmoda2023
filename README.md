@@ -4,7 +4,7 @@
 This is the implementation for the paper:
 [Learning site-specific styles for multi-institutional unsupervised cross-modality domain adaptation](https://arxiv.org/pdf/2311.12437.pdf)
 
-### 🔥🔥🔥 Quick start 🔥🔥🔥
+### 🔥 Quick start
 In this [playground](synthesis/README.md#playground), you can download our pre-trained sythesis model and some preprocessed data. You will explore how to generate synthetic T2 images with **controllable** styles.
 
 
