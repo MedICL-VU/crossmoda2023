@@ -7,8 +7,8 @@ Our synthesis network is used for 3D unpaired image translation, with controllab
 CrossMoDA 2023 dataset can be officially downloaded [here](https://www.synapse.org/#!Synapse:syn51236108/wiki/621732).
 
 Once the dataset is downloaded, we perform the following preprocessing steps:
-- Resample to the median resolution, i.e., 0.41 x 0.41 x 1 mm<sup>3</sup>
-- Based on the cochleae locations, crop the images to 256 x 144 x 32 sub-volumes.
+- Resample to the median resolution of the dataset, i.e., 0.41 x 0.41 x 1 mm<sup>3</sup>
+- Based on the cochlea locations, crop the images to 256 x 144 x 32 sub-volumes.
 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_preprocess.png" alt="preprocess" width="600"/></p>
 
@@ -51,6 +51,13 @@ ImagesB/
 |-----...
 ```
 
+# Create a virtual environment using Anaconda
+Here we create a virtual environment called 'crossmoda2023'
+```
+conda create -n crossmoda2023 python=3.9 -y
+conda activate crossmoda2023
+```
+
 ## Train
 ```
 python train.py -n YourExperimentName -d /Data 
@@ -60,3 +67,16 @@ python train.py -n YourExperimentName -d /Data
 ```
 python test.py -n YourExperimentName -epoch latest --code 0 0 1 -i /Data/ImagesA
 ```
+
+## Playground for controllable output style
+If you just want to play with our pre-trained model to have fun with the controllable styles, here we are!
+
+### Step 1: download the sample data and the pre-trained model
+I have prepared several preprocessed data and our pre-trained model in this '[**Sample**](xx)' folder. Once you finish downloading this folder, you need to move the 'pretrained' folder to the checkpoint directory.
+
+### Step 2: generate output styles using code
+
+```
+python test.py -n pretrained -epoch latest -i ../Sample/ImagesA --code 0 0 1 
+```
+
