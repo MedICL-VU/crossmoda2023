@@ -7,7 +7,7 @@ Our synthesis network is used for 3D unpaired image translation, with controllab
 CrossMoDA 2023 dataset can be officially downloaded [here](https://www.synapse.org/#!Synapse:syn51236108/wiki/621732).
 
 Once the dataset is downloaded, we perform the following preprocessing steps:
-- Resample to the median resolution, i.e., 0.41 x 0.41 x 1 mm ^3^
+- Resample to the median resolution, i.e., 0.41 x 0.41 x 1 mm<sup>3</sup>
 - Based on the cochleae locations, crop the images to 256 x 144 x 32 sub-volumes.
 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_preprocess.png" alt="preprocess" width="600"/></p>
