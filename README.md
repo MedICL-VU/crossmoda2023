@@ -9,7 +9,7 @@ This is the implementation for the paper:
 
 
 ### Problem formulation: unsupervised domain adaptation (UDA)
-In the CrossMoDA challenge, participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain with no manual labeling. In the 2023 edition, the datasets were collected from multiple institutions, and such heterogeous data lead to extra challenges to the UDA problem.
+>In the CrossMoDA challenge, participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain with no manual labeling. In the 2023 edition, the datasets were collected from multiple institutions, and such heterogeous data lead to extra challenges to the UDA problem.
 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_intro.png" alt="intro" width="600"/></p>
 
@@ -17,20 +17,20 @@ In the CrossMoDA challenge, participants are provided with the **labeled** sourc
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig1.png" alt="overview" width="550"/></p>
 
 #### Step 1: unpaired image translation (our major innovation)
-We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D, and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the '[**synthesis**](https://github.com/han-liu/crossmoda2023/tree/main/synthesis)' folder.
+>We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D, and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the '[**synthesis**](https://github.com/han-liu/crossmoda2023/tree/main/synthesis)' folder.
 #### Step 2: train only with synthetic images
-We used [nnU-Netv2](https://github.com/MIC-DKFZ/nnUNet) for segmentation tasks. 
+>We used [nnU-Netv2](https://github.com/MIC-DKFZ/nnUNet) for segmentation tasks. 
 We created a customized trainer and designed two augmentation techniques to augment the local intensities of the structures-of-interest. Our customized trainer and the augmentation script are provided in the '[**segmentation**](https://github.com/han-liu/crossmoda2023/tree/main/segmentation)' folder. 
 
-Once you download the nnU-Net repo, you need to
+>Once you download the nnU-Net repo, you need to
 - add the 'challenge' folder to the nnUNet/nnunetv2/training/nnUNetTrainer/variants
 - replace the 'masking.py' in nnUNet/nnunetv2/training/data_augmentation/custom_transforms.
 
 #### Step 3: self-training
-Real target domain images are included for training to further reduce the domain gap. Here, you can simply use the model obtained by step 2 to make inference on unlabeled target domain images. Then re-train the nnU-Net using both the synthetic imaegs (w/ real labels) and real images (w/ pseudo labels). For our solution, we simply filter out the poor pseudo labels by connected component analysis. Feel free to explore more advanced pseudo label filtering methods!
+>Real target domain images are included for training to further reduce the domain gap. Here, you can simply use the model obtained by step 2 to make inference on unlabeled target domain images. Then re-train the nnU-Net using both the synthetic imaegs (w/ real labels) and real images (w/ pseudo labels). For our solution, we simply filter out the poor pseudo labels by connected component analysis. Feel free to explore more advanced pseudo label filtering methods!
 
 ### Conditional synthesis results
-Each column belongs to the same site/style. Nicely, our synthesized images match the style of the real image from the same site. 
+>Each column belongs to the same site/style. Nicely, our synthesized images match the style of the real image from the same site. 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_results.png" alt="results" width="550"/></p>
 
 ### Challenge results
