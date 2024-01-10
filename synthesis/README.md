@@ -65,18 +65,24 @@ python train.py -n YourExperimentName -d /Data
 
 ## Test
 ```
-python test.py -n YourExperimentName -epoch latest --code 0 0 1 -i /Data/ImagesA
+python test.py -n YourExperimentName --code 0 0 1 -i /Data/ImagesA
 ```
 
 ## Playground for controllable output style
 If you just want to play with our pre-trained model to have fun with the controllable styles, here we are!
 
-### Step 1: download the sample data and the pre-trained model
-I have prepared several preprocessed data and our pre-trained model in this '[**Sample**](xx)' folder. Once you finish downloading this folder, you need to move the 'pretrained' folder to the checkpoint directory.
+### Step 1: download the sample data and the pre-trained model to your local machine
+I have prepared several preprocessed data and our pre-trained model in this '[**sample**](xx)' folder. Once you finish downloading this folder, you need to move the 'pretrained' folder to the checkpoint directory.
 
-### Step 2: generate output styles using code
+### Step 2: time to play!
+You can either generate the known **site-specific** styles using the codes that the network has been trained with, i.e., (0, 0, 1), (0, 1, 0), (1, 0, 0),
+or any codes you like (even some crazy ones) to generate some **unknown** T2 styles. 
+
+You will find that different codes will only have impacts on the image style, not the anatomy! Disentanglement, huh?
 
 ```
-python test.py -n pretrained -epoch latest -i ../Sample/ImagesA --code 0 0 1 
+python test.py -n pretrained --src_image SourceImagePath --src_label SourceLabelPath --save_dir OutputFolder --code 1 2 3
 ```
+Some examples are shown blow:
+<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_playground.png" alt="playground" width="600"/></p>
 
