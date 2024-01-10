@@ -27,7 +27,7 @@ Real target domain images are included for training to further reduce the domain
 
 ### Conditional synthesis results
 Each column belongs to the same site/style. Nicely, our synthesized images match the style of the real image from the same site. 
-<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig4.png" alt="results" width="550"/></p>
+<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_results.png" alt="results" width="550"/></p>
 
 ### Challenge results
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig3.png" alt="results" width="550"/></p>
