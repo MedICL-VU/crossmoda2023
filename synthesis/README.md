@@ -1,12 +1,19 @@
 # Step 1: unpaired image translation with dynamic network
 Our synthesis network is used for 3D unpaired image translation, with controllable output styles by conditioning on a one-hot code.
 
-<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig2.png" alt="drawing" width="600"/></p>
+<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig2.png" alt="method" width="600"/></p>
 
 ## Data preparation
-A and B correspond to the source and target domain, respectively. The filenames in the ImagesA and LabelsA should be the same. EdgesA stores the weighting maps used for re-weighting the edge loss. If EdgesA is not provided, the edge loss will simply treat each voxel equally.
-
 CrossMoDA 2023 dataset can be officially downloaded [here](https://www.synapse.org/#!Synapse:syn51236108/wiki/621732).
+
+Once the dataset is downloaded, we perform the following preprocessing steps:
+- Resample to the median resolution, i.e., 0.41 x 0.41 x 1 mm^3
+- Based on the cochleae locations, crop the images to 256 x 144 x 32 sub-volumes.
+
+<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_preprocess.png" alt="preprocess" width="600"/></p>
+
+Once the preprocessing is done, we need to arrange the data in the following format.
+Note that A and B correspond to the source and target domain, respectively. The filenames in the ImagesA and LabelsA should be the same. EdgesA stores the weighting maps used for re-weighting the edge loss. If EdgesA is not provided, the edge loss will simply treat each voxel equally.
 
 ```
 Data/
