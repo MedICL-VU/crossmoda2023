@@ -4,6 +4,9 @@
 This is the implementation for the paper:
 [Learning site-specific styles for multi-institutional unsupervised cross-modality domain adaptation](https://arxiv.org/pdf/2311.12437.pdf)
 
+### Quick start 🔥
+You can play with our pre-trained sythesis model and our preprocessed data. In this [playground](https://github.com/han-liu/crossmoda2023/tree/main/synthesis#playground-for-controllable-output-styles), you will explore how to generate synthetic T2 images with **controllable** styles.
+
 ### Problem formulation: unsupervised domain adaptation (UDA)
 In the CrossMoDA challenge, participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain with no manual labeling. In the 2023 edition, the datasets were collected from multiple institutions, and such heterogeous data lead to extra challenges to the UDA problem.
 
