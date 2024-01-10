@@ -65,10 +65,10 @@ python train.py -n YourExperimentName -d /Data
 
 ## Test
 ```
-python test.py -n YourExperimentName --code 0 0 1 -i /Data/ImagesA
+python test.py -n YourExperimentName -i /Data/ImagesA --code 0 0 1
 ```
 
-## Playground for controllable output style
+## Playground for controllable output styles
 If you just want to play with our pre-trained model to have fun with the controllable styles, here we are!
 
 ### Step 1: download the sample data and the pre-trained model to your local machine
