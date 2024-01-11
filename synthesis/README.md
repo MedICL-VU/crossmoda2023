@@ -82,7 +82,7 @@ or any codes you like (even some crazy ones, e.g., (1, 5, 10)) to generate some 
 You will find that different codes will only have impacts on the image style, not the anatomy! Disentanglement, huh?
 
 ```
-python test.py -n pretrained --src_image SourceImagePath --src_label SourceLabelPath --save_dir OutputFolder --code 1 2 3
+python play_ground.py -n pretrained --src_image SourceImagePath --src_label SourceLabelPath --save_dir OutputFolder --code 1 2 3
 ```
 Some examples of unknown styles are shown below:
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_playground.png" alt="playground" width="600"/></p>
