@@ -30,7 +30,7 @@ Our UDA framework is an **image-level domain alignment** approach and consists o
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig1.png" alt="overview" width="550"/></p>
 
 #### Step 1: unpaired image translation (our major innovation)
->We performed unpaired image translation to translate T1CE MRIs to T2. We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D, and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the '[**synthesis**](https://github.com/han-liu/crossmoda2023/tree/main/synthesis)' folder.
+>We performed unpaired image translation to translate T1CE MRIs to T2. We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D, and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and demos are provided in the '[**synthesis**](https://github.com/han-liu/crossmoda2023/tree/main/synthesis)' folder.
 
 #### Step 2: train only with synthetic images
 >We used [nnU-Netv2](https://github.com/MIC-DKFZ/nnUNet) for segmentation tasks. 
