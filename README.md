@@ -16,22 +16,26 @@ If you find our code/paper helpful for your research, please kindly consider cit
 If you have any questions, feel free to contact han.liu@vanderbilt.edu or open an Issue in this repo. 
 
 ### 🔥 Quick start
-In this [playground](synthesis/README.md#playground), you can download our pre-trained sythesis model and some preprocessed data. You will explore how to generate synthetic T2 images with **controllable** styles.
+In this [**playground**](synthesis/README.md#playground), you can download our pre-trained sythesis model and some preprocessed data. You will explore how to generate synthetic T2 images with **controllable** styles!
 
-### Problem formulation: unsupervised domain adaptation (UDA)
-In the CrossMoDA challenge, participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain with no manual labeling. In the 2023 edition, the datasets were collected from multiple institutions, and such heterogeous data lead to extra challenges to the UDA problem.
+### CrossMoDA 2023: unsupervised domain adaptation (UDA) meets multi-site data
+Participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs), and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain (T2) with no manual labeling. Particularly, the datasets were collected from **multiple institutions**, and such heterogeous data lead to extra challenges to the UDA problem.
 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_intro.png" alt="intro" width="600"/></p>
 
-### Overview of our solution: image-level domain alignment
+### Overview of our solution
+Our UDA framework is an **image-level domain alignment** approach and consists of three steps, as shown below. To tackle the data heterogeneity, we aim to make the segmentation model robust to any T2 styles by training the model on images with **diverse** T2 stlyes. 
+>Instead of removing site-specific styles by data harmonization, we generate them! 🤓 
+
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig1.png" alt="overview" width="550"/></p>
 
 #### Step 1: unpaired image translation (our major innovation)
->We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D, and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the '[**synthesis**](https://github.com/han-liu/crossmoda2023/tree/main/synthesis)' folder.
+>We performed unpaired image translation to translate T1CE MRIs to T2. We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D, and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and demos are provided in the '[**synthesis**](https://github.com/han-liu/crossmoda2023/tree/main/synthesis)' folder.
+
 #### Step 2: train only with synthetic images
 >We used [nnU-Netv2](https://github.com/MIC-DKFZ/nnUNet) for segmentation tasks. 
-We created a customized trainer and designed two augmentation techniques to augment the local intensities of the structures-of-interest. Our customized trainer and the augmentation script are provided in the '[**segmentation**](https://github.com/han-liu/crossmoda2023/tree/main/segmentation)' folder. 
->
+We created a customized trainer and designed two augmentation techniques to augment the local intensities of the structures-of-interest. Our customized trainer and the augmentation script are provided in the '[**segmentation**](https://github.com/han-liu/crossmoda2023/tree/main/segmentation)' folder.
+
 >Once you download the nnU-Net repo, you need to
 >- add the 'challenge' folder to the nnUNet/nnunetv2/training/nnUNetTrainer/variants
 >- replace the 'masking.py' in nnUNet/nnunetv2/training/data_augmentation/custom_transforms.
