@@ -47,5 +47,7 @@ Each column belongs to the same site/style. From each column on the right panel,
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig3.png" alt="results" width="550"/></p>
 
 ### Acknowledgements
-[CUT](https://github.com/taesungp/contrastive-unpaired-translation), [QS-Attn](https://github.com/sapphire497/query-selected-attention), [nnUNet](https://github.com/MIC-DKFZ/nnUNet)
+- NSF grant 2220401
+- NIH grant T32EB021937
+- We thank the authors of [CUT](https://github.com/taesungp/contrastive-unpaired-translation), [QS-Attn](https://github.com/sapphire497/query-selected-attention), and [nnUNet](https://github.com/MIC-DKFZ/nnUNet) for kindly make their codes publicly accessible.
 
