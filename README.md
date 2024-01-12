@@ -18,8 +18,8 @@ If you have any questions, feel free to contact han.liu@vanderbilt.edu or open a
 ### 🔥 Quick start
 In this [**playground**](synthesis/README.md#playground), you can download our pre-trained sythesis model and some preprocessed data. You will explore how to generate synthetic T2 images with **controllable** styles!
 
-### Problem formulation: unsupervised domain adaptation (UDA)
-Participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain (T2) with no manual labeling. Particularly, the datasets were collected from **multiple institutions**, and such heterogeous data lead to extra challenges to the UDA problem.
+### Intro to CrossMoDA 2023: unsupervised domain adaptation (UDA)
+Participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs), and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain (T2) with no manual labeling. Particularly, the datasets were collected from **multiple institutions**, and such heterogeous data lead to extra challenges to the UDA problem.
 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_intro.png" alt="intro" width="600"/></p>
 
