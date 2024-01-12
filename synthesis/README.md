@@ -63,8 +63,15 @@ pip install -r requirements.txt
 ```
 python train.py -n YourExperimentName -d /Data 
 ```
+During training, you can visualize your intermediate results at /checkpoints/YourExperimentName/web/index.html
+<p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_track_training.png" alt="playground" width="600"/></p>
+
+More training configurations can be found [here](https://github.com/han-liu/crossmoda2023/tree/main/synthesis/options).
 
 ## Test
+We use the input argument 'code' to control which site-specific style to generate.
+For the CrossMoDA 2023, we use 001, 010, 100 to represent three sub-folders prepared by the challenge organizers, i.e., UKM, ETZ, LDN, respectively.
+
 ```
 python test.py -n YourExperimentName -i /Data/ImagesA --code 0 0 1
 ```
