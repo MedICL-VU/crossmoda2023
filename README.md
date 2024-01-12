@@ -30,12 +30,12 @@ Our UDA framework is an **image-level domain alignment** approach and consists o
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig1.png" alt="overview" width="550"/></p>
 
 #### Step 1: unpaired image translation (our major innovation)
->First, we performed unpaired image translation to translate T1CE MRIs to T2 MRIs. We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D, and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the '[**synthesis**](https://github.com/han-liu/crossmoda2023/tree/main/synthesis)' folder.
->
+>We performed unpaired image translation to translate T1CE MRIs to T2. We extended the [QS-Attn](https://github.com/sapphire497/query-selected-attention) to 3D, and modified the generator to a dynamic network. The dynamic network can generate controllable output styles by conditioning on a one-hot site code. Details and the codes for image synthesis are provided in the '[**synthesis**](https://github.com/han-liu/crossmoda2023/tree/main/synthesis)' folder.
+
 #### Step 2: train only with synthetic images
 >We used [nnU-Netv2](https://github.com/MIC-DKFZ/nnUNet) for segmentation tasks. 
-We created a customized trainer and designed two augmentation techniques to augment the local intensities of the structures-of-interest. Our customized trainer and the augmentation script are provided in the '[**segmentation**](https://github.com/han-liu/crossmoda2023/tree/main/segmentation)' folder. 
->
+We created a customized trainer and designed two augmentation techniques to augment the local intensities of the structures-of-interest. Our customized trainer and the augmentation script are provided in the '[**segmentation**](https://github.com/han-liu/crossmoda2023/tree/main/segmentation)' folder.
+
 >Once you download the nnU-Net repo, you need to
 >- add the 'challenge' folder to the nnUNet/nnunetv2/training/nnUNetTrainer/variants
 >- replace the 'masking.py' in nnUNet/nnunetv2/training/data_augmentation/custom_transforms.
