@@ -24,7 +24,7 @@ Participants are provided with the **labeled** source domain images (T1 contrast
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_intro.png" alt="intro" width="600"/></p>
 
 ### Overview of our solution
-Our UDA framework is an image-level domain alignment approach and consists of three steps, as shown below. To tackle the data heterogeneity, we aim to make the segmentation model robust to any T2 styles by training the model on images with **diverse** T2 stlyes. 
+Our UDA framework is an **image-level domain alignment** approach and consists of three steps, as shown below. To tackle the data heterogeneity, we aim to make the segmentation model robust to any T2 styles by training the model on images with **diverse** T2 stlyes. 
 >Instead of removing site-specific styles by data harmonization, we generate them! 🤓 
 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig1.png" alt="overview" width="550"/></p>
