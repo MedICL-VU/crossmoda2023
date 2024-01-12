@@ -19,13 +19,14 @@ If you have any questions, feel free to contact han.liu@vanderbilt.edu or open a
 In this [**playground**](synthesis/README.md#playground), you can download our pre-trained sythesis model and some preprocessed data. You will explore how to generate synthetic T2 images with **controllable** styles!
 
 ### Problem formulation: unsupervised domain adaptation (UDA)
-In the CrossMoDA challenge, participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain with no manual labeling. In the 2023 edition, the datasets were collected from multiple institutions, and such heterogeous data lead to extra challenges to the UDA problem.
+Participants are provided with the **labeled** source domain images (T1 contrast-enhanced MRIs) and the **unlabeled** target domain images (high-resolution T2 MRIs). The goal of this challenge is to obtain a segmentation model for the **target** domain (T2) with no manual labeling. Particularly, the datasets were collected from **multiple institutions**, and such heterogeous data lead to extra challenges to the UDA problem.
 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_intro.png" alt="intro" width="600"/></p>
 
 ### Overview of our solution: image-level domain alignment
-To tackle the data heterogeneity, we aim to make the segmentation model robust to any T2 styles by training the model on the T2 MRIs with DIVERSE stlyes. Our UDA framework consists of three steps, as shown below.
->🤓 Instead of removing site-specific styles by data harmonization, we took an opposite direction: generating site-specific styles!
+To tackle the data heterogeneity, we aim to make the segmentation model robust to any T2 styles by training the model on images with **diverse** T2 stlyes. Our UDA framework consists of three steps, as shown below.
+>🤓 Instead of removing site-specific styles by data harmonization, we took an opposite direction:
+><p align="center">generating site-specific styles!</p>
 
 <p align="center"><img src="https://github.com/han-liu/crossmoda2023/blob/main/figs/vandy365_fig1.png" alt="overview" width="550"/></p>
 
