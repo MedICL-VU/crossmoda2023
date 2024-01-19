@@ -84,7 +84,7 @@ I have prepared several preprocessed data and our pre-trained model in this '[**
 
 ### Step 2: time to play!
 You can either generate the known **site-specific** styles using the codes that the network has been trained with, i.e., (0, 0, 1), (0, 1, 0), (1, 0, 0),
-or any codes you like (even some crazy ones, e.g., (1, 5, 10)) to generate some **unknown** T2 styles. 
+or generate some **unknown** T2 styles by using any codes you like (even some crazy ones, e.g., (1, 5, 10)). 
 
 You will find that different codes will only have impacts on the image style, not the anatomy! Disentanglement, huh?
 
