@@ -1,4 +1,4 @@
-# :trophy: 1st place solution for CrossMoDA 2023 challenge  
+# :trophy: 1st place solution for CrossMoDA 2023 challenge
  [![arXiv](https://img.shields.io/badge/arXiv-2311.12437-blue)](https://arxiv.org/pdf/2311.12437.pdf) [![video](https://img.shields.io/badge/video-Workshop-red)](xx) [![cite](https://img.shields.io/badge/cite-BibTex-yellow)](https://scholar.googleusercontent.com/scholar.bib?q=info:9zj1AnVBBtUJ:scholar.google.com/&output=citation&scisdr=ClExUpxMEI-AnDJEduU:AFWwaeYAAAAAZZ5CbuUPMgRPxcRpotbJifS-0XI&scisig=AFWwaeYAAAAAZZ5Cbonby7wKO8QbhZvpIS096kY&scisf=4&ct=citation&cd=-1&hl=en) [![website](https://img.shields.io/badge/Challenge%20website-50d13d)](https://www.synapse.org/#!Synapse:syn51236108/wiki/621615)
  
 This is the implementation for the paper:
