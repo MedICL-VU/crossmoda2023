@@ -53,7 +53,7 @@ class Vandy365Model(BaseModel):
 
     def __init__(self, opt):
         BaseModel.__init__(self, opt)
-        self.loss_names = ['G_GAN', 'D_real', 'D_fake', 'G', 'NCE', 'DiceA', 'DiceB', 'sobelL1']
+        self.loss_names = ['G_GAN', 'D_real', 'D_fake', 'G', 'NCE', 'SegA', 'SegB', 'sobelL1']
         self.visual_names = ['real_A', 'fake_B', 'real_B', 'real_A_mask', 'seg_A', 'seg_B', 'fake_sobel', 'real_sobel', 'edge_mask']
 
         if self.opt.segB:
