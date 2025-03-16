@@ -15,7 +15,7 @@ If you find our code/paper helpful for your research, please kindly consider cit
   publisher={Springer}
 }
 ```
-If you have any questions, feel free to contact han.liu@vanderbilt.edu or open an Issue in this repo. 
+If you have any questions, feel free to contact han.liu@siemens-healthineers.com or open an Issue in this repo. 
 
 ### 🔥 Quick start
 In this [**playground**](synthesis/README.md#playground), you can download our pre-trained sythesis model and some preprocessed data. You will explore how to generate synthetic T2 images with **controllable** styles!
