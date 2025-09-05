@@ -106,7 +106,7 @@ class NormalizeForegroundd(MapTransform):
         for k in self.keys:
             img = data[k]
             _mean = img[img!=0].mean()
-            _std = img[img!=0].mean()
+            _std = img[img!=0].std()
             data[k] = (data[k] - _mean)/_std
         return data
 
